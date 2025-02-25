@@ -40,7 +40,7 @@ func _physics_process(delta: float) -> void:
 
 func _on_special_tile_check_body_entered(body: Node2D) -> void:
 	isClimbing = true
-	pass
+	pass  
 
 func _on_special_tile_check_body_exited(body: Node2D) -> void:
 	isClimbing = false

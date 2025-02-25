@@ -25,7 +25,6 @@ size = Vector2(14, 15)
 size = Vector2(14, 15)
 
 [node name="Player" type="CharacterBody2D"]
-collision_layer = 3
 script = ExtResource("1_ovy04")
 
 [node name="Camera2D" type="Camera2D" parent="."]
