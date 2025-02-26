@@ -7,6 +7,8 @@ var isClimbing : bool = false
 var XDirection
 var YDirection
 
+@onready var animated_sprite = $AnimatedSprite2D
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor() and not isClimbing:
@@ -35,7 +37,23 @@ func _physics_process(delta: float) -> void:
 			velocity.y = YDirection * SPEED
 		else:
 			velocity.y = move_toward(velocity.x, 0, SPEED)
+			
+	# Flip the sprite depending on direction
+	if XDirection > 0:
+		animated_sprite.flip_h = false  # Moving right
+	elif XDirection < 0:
+		animated_sprite.flip_h = true   # Moving left
 
+	#Play animations
+	if isClimbing:
+		animated_sprite.play("climb")
+	elif not is_on_floor():
+		animated_sprite.play("jump")
+	elif XDirection != 0 and velocity.x != 0 and not is_on_wall():
+		animated_sprite.play("run")
+	else:
+		animated_sprite.play("idle")
+	
 	move_and_slide()
 
 func _on_special_tile_check_body_entered(body: Node2D) -> void:
