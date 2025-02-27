@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://dq47v8mhf8dft"]
 
-[ext_resource type="Texture2D" uid="uid://8sqjy2de648d" path="res://assets/humanoids/white.png" id="1_76tjv"]
+[ext_resource type="Texture2D" uid="uid://8sqjy2de648d" path="res://assets/player/white.png" id="1_76tjv"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_ovy04"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ct1it"]
@@ -90,9 +90,8 @@ zoom = Vector2(4, 4)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_xr0xd")
-animation = &"jump"
+animation = &"run"
 autoplay = "idle"
-frame_progress = 0.479871
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 0.5)

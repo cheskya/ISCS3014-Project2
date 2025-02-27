@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buhu2xb7mqn42"
-path="res://.godot/imported/cannon.png-66d4973011cf477570c7e4d88e5c18e6.ctex"
+uid="uid://8sqjy2de648d"
+path="res://.godot/imported/white.png-724330be48bc1671b95712069ea9ef8b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/enemies/cannon.png"
-dest_files=["res://.godot/imported/cannon.png-66d4973011cf477570c7e4d88e5c18e6.ctex"]
+source_file="res://assets/player/white.png"
+dest_files=["res://.godot/imported/white.png-724330be48bc1671b95712069ea9ef8b.ctex"]
 
 [params]
 
